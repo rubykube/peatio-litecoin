@@ -1,7 +1,8 @@
 require "peatio/litecoin/version"
+require "active_support/core_ext/object/blank"
 
 module Peatio
   module Litecoin
-    # Your code goes here...
+    require "peatio/litecoin/client"
   end
 end
