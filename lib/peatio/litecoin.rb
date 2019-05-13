@@ -1,5 +1,5 @@
-require "peatio/litecoin/version"
 require "active_support/core_ext/object/blank"
+require "active_support/core_ext/enumerable"
 require "peatio"
 
 module Peatio
@@ -12,5 +12,7 @@ module Peatio
     require "peatio/litecoin/wallet"
 
     require "peatio/litecoin/hooks"
+
+    require "peatio/litecoin/version"
   end
 end
