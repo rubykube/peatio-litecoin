@@ -33,7 +33,7 @@ module Peatio
             'Content-Type' => 'application/json' }
         response.assert_2xx!
         response = JSON.parse(response.body)
-        response['error'].tap { |error| raise ResponseError.new(error['code'], error['message']) if error }
+        response['error'].tap { |e| raise ResponseError.new(e['code'], e['message']) if e }
         response.fetch('result')
       rescue => e
         if e.is_a?(Error)
