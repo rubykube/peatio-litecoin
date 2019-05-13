@@ -10,5 +10,7 @@ module Peatio
     require "peatio/litecoin/blockchain"
     require "peatio/litecoin/client"
     require "peatio/litecoin/wallet"
+
+    require "peatio/litecoin/hooks"
   end
 end
