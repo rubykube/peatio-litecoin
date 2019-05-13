@@ -7,7 +7,8 @@ module Peatio
     require "bigdecimal"
     require "bigdecimal/util"
 
-    require "peatio/litecoin/client"
     require "peatio/litecoin/blockchain"
+    require "peatio/litecoin/client"
+    require "peatio/litecoin/wallet"
   end
 end
