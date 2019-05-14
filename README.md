@@ -22,7 +22,10 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+This gem is example of Peatio plugable coin integration.
+
+It implements Peatio::Blockchain::Abstract & Peatio::Wallet::Abstract interfaces
+and register new blockchain client and wallet gateway to make it accessible for Peatio BlockchainService and WalletService
 
 ## Development
 
