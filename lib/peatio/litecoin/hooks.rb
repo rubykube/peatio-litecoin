@@ -6,14 +6,14 @@ module Peatio
           if Peatio::Blockchain::VERSION >= '2.0'
             [
               "Litecoin plugin was designed for work with 1.x. Blockchain.",
-              "You have #{Peatio::Blockchain::VERSION}."
+              "You use #{Peatio::Blockchain::VERSION}."
             ].join('\n').tap { |s| Kernel.abort s }
           end
 
           if Peatio::Wallet::VERSION >= '2.0'
             [
               "Litecoin plugin was designed for work with 1.x. Wallet.",
-              "You have #{Peatio::Wallet::VERSION}."
+              "You use #{Peatio::Wallet::VERSION}."
             ].join('\n').tap { |s| Kernel.abort s }
           end
         end
