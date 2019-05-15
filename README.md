@@ -22,20 +22,42 @@ Or install it yourself as:
 
 ## Usage
 
-This gem is example of Peatio plugable coin integration.
+For Peatio Litecoin plugin integration you need to do the following steps:
 
-It implements Peatio::Blockchain::Abstract & Peatio::Wallet::Abstract interfaces
-and register new blockchain client and wallet gateway to make it accessible for Peatio BlockchainService and WalletService
+### Image Build.
+
+1. Add peatio-litecoin gem into your Gemfile.plugin
+```ruby
+gem 'peatio-litecoin', '~> 0.1.0'
+```
+
+2. Run `bundle install` for updating Gemfile.lock
+
+3. Build custom Peatio [docker image with Litecoin plugin](https://github.com/rubykube/peatio/blob/master/docs/plugins.md#build)
+
+4. Push your image using `docker push`
+
+5. Update your deployment to use image with peatio-litecoin gem
+
+### Peatio Configuration.
+
+1. Create Litecoin Blockchain [config example](../config/blockchains.yml).
+    * No additional steps are needed
+
+2. Create Litecoin Currency [config example](../config/currencies.yml).
+    * No additional steps are needed
+
+3. Create Litecoin Wallets [config example](../config/wallets.yml)(deposit and hot wallets are required).
+    * No additional steps are needed
+
 
 ## Development
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+Plugin development [example](https://github.com/rubykube/peatio/blob/master/docs/coins/development.md).
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/peatio-litecoin.
+Bug reports and pull requests are welcome on GitHub at https://github.com/rubykube/peatio-litecoin.
 
 ## License
 
