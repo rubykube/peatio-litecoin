@@ -12,6 +12,8 @@ module Peatio
       end
 
       def configure(settings = {})
+        # Clean client state during configure.
+        @client = nil
         @settings.merge!(settings.slice(*SUPPORTED_SETTINGS))
       end
 
