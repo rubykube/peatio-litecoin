@@ -1,19 +1,26 @@
 module Peatio
   module Litecoin
     module Hooks
+      BLOCKCHAIN_VERSION_REQUIREMENT = "~> 1.0.0"
+      WALLET_VERSION_REQUIREMENT = "~> 1.0.0"
+
       class << self
         def check_compatibility
-          if Peatio::Blockchain::VERSION >= '2.0'
+          unless Gem::Requirement.new(BLOCKCHAIN_VERSION_REQUIREMENT)
+                                 .satisfied_by?(Gem::Version.new(Peatio::Blockchain::VERSION))
             [
-              "Litecoin plugin was designed for work with 1.x. Blockchain.",
-              "You use #{Peatio::Blockchain::VERSION}."
+              "Litecoin blockchain version requiremnt was not suttisfied by Peatio::Blockchain.",
+              "Litecoin blockchain requires #{BLOCKCHAIN_VERSION_REQUIREMENT}.",
+              "Peatio::Blockchain version is #{Peatio::Blockchain::VERSION}"
             ].join('\n').tap { |s| Kernel.abort s }
           end
 
-          if Peatio::Wallet::VERSION >= '2.0'
+          unless Gem::Requirement.new(WALLET_VERSION_REQUIREMENT)
+                                 .satisfied_by?(Gem::Version.new(Peatio::Wallet::VERSION))
             [
-              "Litecoin plugin was designed for work with 1.x. Wallet.",
-              "You use #{Peatio::Wallet::VERSION}."
+              "Litecoin wallet version requiremnt was not suttisfied by Peatio::Wallet.",
+              "Litecoin wallet requires #{WALLET_VERSION_REQUIREMENT}.",
+              "Peatio::Wallet version is #{Peatio::Wallet::VERSION}"
             ].join('\n').tap { |s| Kernel.abort s }
           end
         end
