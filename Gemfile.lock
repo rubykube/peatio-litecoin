@@ -1,3 +1,18 @@
+GIT
+  remote: https://github.com/rubykube/peatio-core
+  revision: 703b5c1f08e23616c842e532d7aec7c17c8ecec8
+  branch: transaction-string-status
+  specs:
+    peatio (0.6.0)
+      activemodel (~> 5.2.3)
+      amqp
+      bunny
+      clamp
+      em-websocket
+      eventmachine
+      jwt
+      mysql2
+
 PATH
   remote: .
   specs:
@@ -6,7 +21,6 @@ PATH
       better-faraday (~> 1.0.5)
       faraday (~> 0.15.4)
       memoist (~> 0.16.0)
-      peatio (~> 0.6.0)
 
 GEM
   remote: https://rubygems.org/
@@ -55,15 +69,6 @@ GEM
       metaclass (~> 0.0.1)
     multipart-post (2.1.1)
     mysql2 (0.5.2)
-    peatio (0.6.0)
-      activemodel (~> 5.2.3)
-      amqp
-      bunny
-      clamp
-      em-websocket
-      eventmachine
-      jwt
-      mysql2
     pry (0.12.2)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
@@ -100,6 +105,7 @@ PLATFORMS
 DEPENDENCIES
   bundler (~> 1.16)
   mocha (~> 1.8)
+  peatio!
   peatio-litecoin!
   pry-byebug
   rake (~> 10.0)
