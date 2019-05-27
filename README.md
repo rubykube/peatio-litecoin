@@ -1,8 +1,6 @@
 # Peatio::Litecoin
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/peatio/litecoin`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Peatio litecoin plugin for Rubykube stack
 
 ## Installation
 
@@ -28,7 +26,7 @@ For Peatio Litecoin plugin integration you need to do the following steps:
 
 1. Add peatio-litecoin gem into your Gemfile.plugin
 ```ruby
-gem 'peatio-litecoin', '~> 0.1.0'
+gem 'peatio-litecoin', '~> 0.2.0'
 ```
 
 2. Run `bundle install` for updating Gemfile.lock
@@ -62,3 +60,8 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/rubyku
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+
+## Consulting
+
+You can contact Openware for finding certified vendors:
+[Openware.com](https://www.openware.com)
